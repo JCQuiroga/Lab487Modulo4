@@ -17,11 +17,19 @@ namespace Lab487Modulo4.Controllers
         {
             return Ok($"Hola {s}");
         }
+
         [LogFiltro]
         [ResponseType(typeof(String))]
-        public IHttpActionResult GetFiltrado(String p)
+        public IHttpActionResult GetFiltrado(String s,bool filtrado)
         {
-            return Ok($"Hola {p}");
+            return Ok($"Hola {s}");
+        }
+
+        [Authorize]
+        [ResponseType(typeof(String))]
+        public IHttpActionResult GetAuth(String s,bool auth)
+        {
+            return Ok($"Hola {s}");
         }
     }
 }

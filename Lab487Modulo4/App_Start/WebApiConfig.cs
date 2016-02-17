@@ -13,6 +13,7 @@ namespace Lab487Modulo4
             // Web API configuration and services
 
             config.MessageHandlers.Add(new LogHandler());
+            config.MessageHandlers.Add(new AuthMessageHandler());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
